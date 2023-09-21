@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수</title>
+    <script>
+        /*
+        익명함수로 사용
+        매개변수가 하나일 시 괄호 생략 가능
+        명령문이 한 줄일 시 {}, return 생략 가능
+        */
+        let sqr = x => x**2;
+
+        let sum = (a,b) => a+b;
+
+        let min = (a,b) => {
+            if (a>b) a=b;
+            return a;
+        }
+
+        console.log(sqr(4));
+        console.log(sum(3,5));
+        console.log(min(6,9));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

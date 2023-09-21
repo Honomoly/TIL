@@ -1,0 +1,105 @@
+/* #loginform
+{ margin-top: 20px;
+font-style: italic;}
+
+#loginform img{ 
+    margin-left: 320px;
+    width: 1000px;
+    height: 500px;}
+      
+
+#id:hover{ background-color: skyblue;}
+#pw:hover{ background-color: skyblue;}
+
+
+#member{
+    float: right;
+    margin-right: 400px;
+    font-style: italic;
+
+}
+
+#btn{
+    float: right;
+} */
+
+/* General Styles */
+
+/* General Styles */
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+} */
+
+/* Existing reset and general styles */
+
+/* Existing reset and general styles */
+
+#image-container {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    margin: auto;
+}
+
+#bg-img {
+    margin-left: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#content-wrap {
+    margin-left: 27%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 400px;
+    z-index: 1;
+}
+
+/* Existing CSS for login, member, etc */
+
+/* Centering elements */
+#login form,
+#member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Right align for member */
+#member {
+    align-items: center;
+}
+
+#loginBtn,#btn {
+	margin-top: 25px;
+    padding: 10px 20px;
+    border-color: #fffbdf;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #03aff2;
+    background-color: #fffbdf;
+}
+
+.write {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-display:inherit;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 0 0 #ffffd1;
+}

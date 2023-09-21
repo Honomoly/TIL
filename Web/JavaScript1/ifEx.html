@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제</title>
+    <script>
+        let n1 = prompt("숫자1 입력");
+        let n2 = prompt("숫자2 입력");
+        let n3 = prompt("숫자3 입력");
+        if (n1 > n2) {
+            if (n1 > n3) {
+                max = n1;
+            } else {
+                max = n3;
+            }
+        } else if (n2 > n3) {
+            max = n2;
+        } else {
+            max = n3;
+        }
+
+        document.write("최댓값 : " + max);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        /* 세로방향 */
+        @media all and (orientation:portrait) {
+            body {background-color: #fff;}
+        }
+        /* 가로방향 */
+        @media all and (orientation:landscape) {
+            body {background-color: yellow;}
+        }
+
+
+        * {margin:0; padding:0;}
+
+        div {
+            width: 50%;
+            margin: 0 auto;
+            max-width: 420px;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="image/사진.jpg" alt="">
+    </div>
+</body>
+</html>

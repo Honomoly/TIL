@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체 : 생성자 함수 사용(클래스)</title>
+    <script>
+        function People() { // 클래스 이름은 보통 대문자 시작
+            // 속성
+            this.name = "장승헌"; // 여기선 쉼표가 아님!
+            this.age = 26;
+            this.gender = "남자";
+
+            // 메소드
+            this.getName = function() {
+                return this.name
+            }
+        }
+
+        let person = new People();
+
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.gender);
+        console.log(person.getName());
+
+        // 생성자 함수에 변경 없이 객체 수정 가능
+        // 추가
+        person.address = "서울";
+        person.showAge = function() {
+            return this.age
+        };
+        // 수정
+        person.age = 27;
+
+        console.log(person.age);
+        console.log(person.showAge());
+        console.log(person.address);
+
+        // 매개변수 대입받는 생성자 함수
+        function Book(title, author, price, date) {
+            this.title = title;
+            this.author = author;
+            this.price = price;
+            this.date = date;
+            this.getInfo = function() {
+                console.log(this.title+this.author+this.price+this.date)
+            };
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

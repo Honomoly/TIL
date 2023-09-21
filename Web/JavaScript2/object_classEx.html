@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제</title>
+    <script>
+        class Rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            };
+
+            get width() {
+                return this._width;
+            };
+            get height() {
+                return this._height;
+            };
+
+            set width(WW) {
+                this._width = WW;
+            };
+            set height(HH) {
+                this._height = HH;
+            };
+
+            getArea() {
+                return this.width*this.height;
+            };
+        }
+        
+        let r1 = new Rectangle(30, 10);
+        console.log("가로길이 : "+r1.width+", 세로길이 : "+r1.height);
+        console.log("사각형의 넓이 : "+r1.getArea());
+
+        r1.width = 20; r1.height = 30;
+        console.log("사각형의 넓이 : "+r1.getArea());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window 객체 : setTimeout()</title>
+    <script>
+        // 실행 직후 msgWindow.html 문서를 연 후 3초 타임아웃 설정, 자동으로 닫힘
+        function openMessageWin() {
+            window.open("msgWindow.html", "msgWin", "width=300, height =200");
+        }
+
+        function showMsg() {
+            document.write("로드 직후 열린 공지사항이<br>3초 후에 자동으로 닫혔습니다.");
+        }
+
+    </script>
+</head>
+<!-- 
+    onLoad : 창이 열렸을 때
+    onFocus : 창이 앞으로 나왔을 때(주목되었을 때)
+ -->
+<body onLoad="openMessageWin()" onFocus="showMsg()">
+    
+</body>
+</html>

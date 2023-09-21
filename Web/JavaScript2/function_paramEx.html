@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제</title>
+    <script>
+        function input() {
+            let row = parseInt(prompt("테이블의 행 수 입력"));
+            let column = parseInt(prompt("테이블의 열 수 입력"));
+            makeTable(row, column);
+        }
+
+        function makeTable(row, column) {
+            document.write("<table border='1'>");
+                for (let i=1; i<=row; i++) {
+                    document.write("<tr>");
+                    for (let j=1; j<=column; j++) {
+                        document.write("<td>★</td>");
+                    }
+                    document.write("</tr>");
+                }
+            document.write("</table>");
+        }
+
+        input();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

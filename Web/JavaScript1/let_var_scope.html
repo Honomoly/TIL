@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let, var의 scope 차이</title>
+    <script>
+        let sum = 0;
+        for (var i=0; i<10; i++) {
+            sum += 1;
+        }
+
+        document.write(i + "<br>") // for 블록 이후에도 사용 가능
+
+        sum = 0;
+
+        for (let j=0; j<10; j++) {
+            sum += 1;
+        }
+
+        document.write(j) // for 블록 이후에 사용 불가능
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

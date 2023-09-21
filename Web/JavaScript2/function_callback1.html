@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수</title>
+    <script>
+        // 함수 내에서 함수가 매개변수로 사용될 때 이를 callback function라고 부른다  
+
+        // 함수를 매개변수로 받는 함수;
+        function show(fct) {
+            fct();
+        }
+
+        // 일반함수
+        function test() {
+            alert("실험문입니다")
+        }
+
+        // 익명함수
+        let callback = function() {
+            alert("익명함수입니다");
+        }
+
+        show(test); // 함수명 입력시
+        show(callback); // 변수명 입력시
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

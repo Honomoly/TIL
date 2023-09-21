@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math.random()</title>
+    <script>
+        // 난수 발생
+        for (let i=1; i<=10; i++) {
+            // 0과 1사이의 실수가 랜덤으로 발생함
+            let num = Math.random();
+            document.write(num + "<br>");
+        }
+
+        document.write("<hr>");
+
+        // 1 ~ 10의 정수로 올려보자
+        for (let i=1; i<=10; i++) {
+            let num = Math.floor(Math.random()*10)+1;
+            document.write(num + "<br>");
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

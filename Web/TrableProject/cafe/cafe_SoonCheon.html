@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>순천</title>
+    <link rel="stylesheet" type="text/css" href="../css/cafe_section.css">
+    <link rel="stylesheet" type="text/css" href="../css/cafe_share.css">
+    <link rel="stylesheet" href="../css/areaMenu.css">
+    <link rel="stylesheet" href="../css/areaSubMenu.css">
+    <link rel="stylesheet" href="../css/areaContent.css">
+    <link rel="stylesheet" href="../css/open.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/cafe_section.js"></script>
+    <script src="../js/area.js"></script>
+    <script src="../js/slide.js"></script>
+    <script src="../js/open1.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="headerBox">
+                <div id="logoBox"><a href="../index.html"><img src="../image/proLogo.png" id="logoImg"></a></div>
+                <div id="topMenuBox"><button onclick="location.href='../login.html'">로그인/회원가입</button></div>
+            </div>
+            <div class="underline"></div>
+        </header>
+        <nav>
+            <article id="area">
+                <div id="area_menu">
+                    <ul id="tab">
+                        <li><a href='#' class="area_sel">모험명소</a></li>
+                        <li><a href='#' class="area_sel">문화유적지</a></li>
+                        <li><a href='#' class="area_sel">해변과해안</a></li>
+                        <li><a href='#' class="area_sel">산과산책로</a></li>
+                        <li><a href='#' class="area_sel">편안한휴양지</a></li>
+                        <li><a href="#" class="area_sel" id="showAllMenu">전체보기</a></li>
+                    </ul>
+                </div>
+                <div id="area_sub_menu">
+                    <div class="subMenuItem" id="subMenuItem1">
+                        <ul>
+                            <li><a href="#" class="sub_btn">가평</a></li>
+                            <li><a href="#" class="sub_btn">단양</a></li>
+                        </ul>
+                    </div>
+                    <div class="subMenuItem" id="subMenuItem2">
+                        <ul>
+                            <li><a href="#" class="sub_btn">경주</a></li>
+                            <li><a href="#" class="sub_btn">대구</a></li>
+                        </ul>
+                    </div>
+                    <div class="subMenuItem" id="subMenuItem3">
+                        <ul>
+                            <li><a href="#" class="sub_btn">부산</a></li>
+                            <li><a href="#" class="sub_btn">여수</a></li>
+                        </ul>
+                    </div>
+                    <div class="subMenuItem" id="subMenuItem4">
+                        <ul>
+                            <li><a href="#" class="sub_btn">고양</a></li>
+                            <li><a href="#" class="sub_btn">제주</a></li>
+                        </ul>
+                    </div>
+                    <div class="subMenuItem" id="subMenuItem5">
+                        <ul>
+                            <li><a href="#" class="sub_btn">순천</a></li>
+                            <li><a href="#" class="sub_btn">태안</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="prevNextButtonBox1">
+                    <img id="prevButton1" src="../image/prevButton.png">
+                    <img id="nextButton1" src="../image/nextButton.png">
+                </div>
+                <div id="prevNextButtonBox2">
+                    <img id="prevButton2" src="../image/prevButton.png">
+                    <img id="nextButton2" src="../image/nextButton.png">
+                </div>
+                <div id="area_content">
+                    <div id="area1">
+                        <h3 class="area_btn">가평</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/gapyong1.jpeg" class="slide1">
+                                <img src="../image/gapyong3.jpeg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>가평레일파크</li>
+                            <li>가평용추계곡</li>
+                        </ul>
+                        <h3 class="area_btn">단양</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/danyang1.jpg" class="slide2">
+                                <img src="../image/danyang3.jpeg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>만천하</li>
+                            <li>패러글라이딩</li>
+                        </ul>
+                    </div>
+                    <div id="area2">
+                        <h3 class="area_btn">경주</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/gyongju1.jpg" class="slide1">
+                                <img src="../image/gyongju3.jpg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>불국사</li>
+                            <li>석굴암</li>
+                        </ul>
+                        <h3 class="area_btn">대구</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/daegu1.jpg" class="slide2">
+                                <img src="../image/daegu3.jpeg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>근대문화골목</li>
+                            <li>대구근대역사관</li>
+                        </ul>
+                    </div>
+                    <div id="area3">
+                        <h3 class="area_btn">부산</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/busan1.jpg" class="slide1">
+                                <img src="../image/busan3.jpeg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>국제시장</li>
+                            <li>해운대해수욕장</li>
+                        </ul>
+                        <h3 class="area_btn">여수</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/yeosu1.jpg" class="slide2">
+                                <img src="../image/yeosu3.jpeg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>여수 아쿠아플라넷</li>
+                            <li>여수 해상케이블카</li>
+                        </ul>
+                    </div>
+                    <div id="area4">
+                        <h3 class="area_btn">고양</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/goyang1.jpeg" class="slide1">
+                                <img src="../image/goyang3.jpg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>북한산</li>
+                            <li>일산호수공원</li>
+                        </ul>
+                        <h3 class="area_btn">제주</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/jeju1.jpeg" class="slide2">
+                                <img src="../image/jeju3.jpg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>성산일출봉</li>
+                            <li>한라산</li>
+                        </ul>
+                    </div>
+                    <div id="area5">
+                        <h3 class="area_btn">순천</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/sooncheon1.jpeg" class="slide1">
+                                <img src="../image/sooncheon3.jpeg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>순천만국가정원</li>
+                            <li>순천만습지</li>
+                        </ul>
+                        <h3 class="area_btn">태안</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/tean1.jpeg" class="slide2">
+                                <img src="../image/tean3.jpeg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>천리포수목원</li>
+                            <li>팜카밀레</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </article>
+        </nav>
+        <section>
+            <div id="title"><h1>순천의 추천 맛집은?</h1></div>
+            <div class="cafe_l">
+                <div class="cafe_img">
+                    <img src="../image/SoonCheon/sooncheon1.jpg">
+                    <img src="../image/restaurant.png">
+                </div>
+                <div class="cafe_info">
+                    <table class="cafe_info">
+                        <thead class="cafe_info">
+                            <tr><th colspan="3">나눌터</th></tr>
+                            <tr><td colspan="3">한식 한가득의 도토리 요리 전문점</td></tr>
+                            <tr><td colspan="3">상세정보</td></tr>
+                        </thead>
+                        <tbody class="cafe_info">
+                            <tr><td>주소</td><td colspan="2">전남 순천시 팔마1길 4 1층</td></tr>
+                            <tr><td>전화번호</td><td colspan="2">061-726-0536</td></tr>
+                            <tr><td>영업시간</td><td colspan="2">11:10 ~ 21:00</td></tr>
+                            <tr><td>웹페이지</td><td colspan="2"><a href="#"></a></td></tr>
+                        </tbody>
+                        <tfoot class="cafe_info">
+                            <tr>
+                                <td colspan="2"><a href="#"><img src="../image/navigate.png"><div>지도</div></a></td>
+                                <td><a href="#"><img src="../image/comment.png"><div>리뷰</div></a></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="cafe_r">
+                <div class="cafe_img">
+                    <img src="../image/SoonCheon/sooncheon2.jpg">
+                    <img src="../image/restaurant.png">
+                </div>
+                <div class="cafe_info">
+                    <table class="cafe_info">
+                        <thead class="cafe_info">
+                            <tr><th colspan="3">벽오동</th></tr>
+                            <tr><td colspan="3">보리밥 정식 하나면 든든한 한식당</td></tr>
+                            <tr><td colspan="3">상세정보</td></tr>
+                        </thead>
+                        <tbody class="cafe_info">
+                            <tr><td>주소</td><td colspan="2">전남 순천시 상사호길 73</td></tr>
+                            <tr><td>전화번호</td><td colspan="2">061-743-5569</td></tr>
+                            <tr><td>영업시간</td><td colspan="2">11:00 ~ 20:30</td></tr>
+                            <tr><td>웹페이지</td><td colspan="2"><a href="#"></a></td></tr>
+                        </tbody>
+                        <tfoot class="cafe_info">
+                            <tr>
+                                <td colspan="2"><a href="#"><img src="../image/navigate.png"><div>지도</div></a></td>
+                                <td><a href="#"><img src="../image/comment.png"><div>리뷰</div></a></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="cafe_l">
+                <div class="cafe_img">
+                    <img src="../image/SoonCheon/sooncheon3.jpg">
+                    <img src="../image/cafe.png">
+                </div>
+                <div class="cafe_info">
+                    <table class="cafe_info">
+                        <thead class="cafe_info">
+                            <tr><th colspan="3">브루웍스</th></tr>
+                            <tr><td colspan="3">독특한 분위기로 무장한 카페</td></tr>
+                            <tr><td colspan="3">상세정보</td></tr>
+                        </thead>
+                        <tbody class="cafe_info">
+                            <tr><td>주소</td><td colspan="2">전남 순천시 역전길 61</td></tr>
+                            <tr><td>전화번호</td><td colspan="2">061-745-2545</td></tr>
+                            <tr><td>영업시간</td><td colspan="2">10:00 ~ 23:00</td></tr>
+                            <tr><td>웹페이지</td><td colspan="2"><a href="http://brewworks.kr/">brewworks.kr/</a></td></tr>
+                        </tbody>
+                        <tfoot class="cafe_info">
+                            <tr>
+                                <td colspan="2"><a href="#"><img src="../image/navigate.png"><div>지도</div></a></td>
+                                <td><a href="#"><img src="../image/comment.png"><div>리뷰</div></a></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="cafe_r">
+                <div class="cafe_img">
+                    <img src="../image/SoonCheon/sooncheon4.jpg">
+                    <img src="../image/restaurant.png">
+                </div>
+                <div class="cafe_info">
+                    <table class="cafe_info">
+                        <thead class="cafe_info">
+                            <tr><th colspan="3">건봉국밥</th></tr>
+                            <tr><td colspan="3">순천 아랫장 앞에 소문난 국밥집</td></tr>
+                            <tr><td colspan="3">상세정보</td></tr>
+                        </thead>
+                        <tbody class="cafe_info">
+                            <tr><td>주소</td><td colspan="2">전남 순천시 장평로 65</td></tr>
+                            <tr><td>전화번호</td><td colspan="2">061-752-0900</td></tr>
+                            <tr><td>영업시간</td><td colspan="2">06:30 ~ 21:00</td></tr>
+                            <tr><td>웹페이지</td><td colspan="2"><a href="https://smartstore.naver.com/gunbong1987">smartstore.naver.com/gunbong1987</a></td></tr>
+                        </tbody>
+                        <tfoot class="cafe_info">
+                            <tr>
+                                <td colspan="2"><a href="#"><img src="../image/navigate.png"><div>지도</div></a></td>
+                                <td><a href="#"><img src="../image/comment.png"><div>리뷰</div></a></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="copyright">Copyright © 싸강힘드시조 Website 2023</span>
+                    </div>
+                    <!-- 
+                    <div class="col-md-4">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                     -->
+                    <div class="col-md-4">
+                        <ul class="list-inline quicklinks">
+                            <li><a href="#">송지현</a>
+                            </li>
+                            <li><a href="#">장승헌</a>
+                            </li>
+                            <li><a href="#">서준영</a>
+                            </li>
+                            <li><a href="#">김민열</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

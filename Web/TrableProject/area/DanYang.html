@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="../css/areaMenu.css">
+    <link rel="stylesheet" href="../css/areaSubMenu.css">
+    <link rel="stylesheet" href="../css/areaContent.css">
+    <link rel="stylesheet" href="../css/open.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/area.js"></script>
+    <script src="../js/slide.js"></script>
+    <script src="../js/open.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div id="headerBox">
+                <div id="logoBox"><a href="../index.html"><img src="../image/proLogo.png" id="logoImg"></a></div>
+                <div id="topMenuBox"><button onclick="location.href='../login.html'">로그인/회원가입</button></div>
+            </div>
+            <div class="underline"></div>
+        </header>
+        <section>
+            <article id="area">
+                <div id="area_menu">
+                    <ul id="tab">
+                        <li><a href='#' class="area_sel">모험명소</a></li>
+                        <li><a href='#' class="area_sel">문화유적지</a></li>
+                        <li><a href='#' class="area_sel">해변과해안</a></li>
+                        <li><a href='#' class="area_sel">산과산책로</a></li>
+                        <li><a href='#' class="area_sel">편안한휴양지</a></li>
+                        <li><a href="#" class="area_sel" id="showAllMenu">전체보기</a></li>
+                    </ul>
+                </div>
+                <div id="area_sub_menu">
+                    <div class="subMenuItem" id="subMenuItem1">
+                        <ul>
+                            <li><a href="#" class="sub_btn">가평</a></li>
+                            <li><a href="#" class="sub_btn">단양</a></li>
+                        </ul>
+                    </div>
+                    <div class="subMenuItem" id="subMenuItem2">
+                        <ul>
+                            <li><a href="#" class="sub_btn">경주</a></li>
+                            <li><a href="#" class="sub_btn">대구</a></li>
+                        </ul>
+                    </div>
+                    <div class="subMenuItem" id="subMenuItem3">
+                        <ul>
+                            <li><a href="#" class="sub_btn">부산</a></li>
+                            <li><a href="#" class="sub_btn">여수</a></li>
+                        </ul>
+                    </div>
+                    <div class="subMenuItem" id="subMenuItem4">
+                        <ul>
+                            <li><a href="#" class="sub_btn">고양</a></li>
+                            <li><a href="#" class="sub_btn">제주</a></li>
+                        </ul>
+                    </div>
+                    <div class="subMenuItem" id="subMenuItem5">
+                        <ul>
+                            <li><a href="#" class="sub_btn">순천</a></li>
+                            <li><a href="#" class="sub_btn">태안</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="prevNextButtonBox1">
+                    <img id="prevButton1" src="../image/prevButton.png">
+                    <img id="nextButton1" src="../image/nextButton.png">
+                </div>
+                <div id="prevNextButtonBox2">
+                    <img id="prevButton2" src="../image/prevButton.png">
+                    <img id="nextButton2" src="../image/nextButton.png">
+                </div>
+                <div id="area_content">
+                    <div id="area1">
+                        <h3 class="area_btn">가평</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/gapyong1.jpeg" class="slide1">
+                                <img src="../image/gapyong3.jpeg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>가평레일파크</li>
+                            <li>가평용추계곡</li>
+                        </ul>
+                        <h3 class="area_btn">단양</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/danyang1.jpg" class="slide2">
+                                <img src="../image/danyang3.jpeg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>만천하</li>
+                            <li>패러글라이딩</li>
+                        </ul>
+                    </div>
+                    <div id="area2">
+                        <h3 class="area_btn">경주</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/gyongju1.jpg" class="slide1">
+                                <img src="../image/gyongju3.jpg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>불국사</li>
+                            <li>석굴암</li>
+                        </ul>
+                        <h3 class="area_btn">대구</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/daegu1.jpg" class="slide2">
+                                <img src="../image/daegu3.jpeg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>근대문화골목</li>
+                            <li>대구근대역사관</li>
+                        </ul>
+                    </div>
+                    <div id="area3">
+                        <h3 class="area_btn">부산</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/busan1.jpg" class="slide1">
+                                <img src="../image/busan3.jpeg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>국제시장</li>
+                            <li>해운대해수욕장</li>
+                        </ul>
+                        <h3 class="area_btn">여수</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/yeosu1.jpg" class="slide2">
+                                <img src="../image/yeosu3.jpeg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>여수 아쿠아플라넷</li>
+                            <li>여수 해상케이블카</li>
+                        </ul>
+                    </div>
+                    <div id="area4">
+                        <h3 class="area_btn">고양</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/goyang1.jpeg" class="slide1">
+                                <img src="../image/goyang3.jpg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>북한산</li>
+                            <li>일산호수공원</li>
+                        </ul>
+                        <h3 class="area_btn">제주</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/jeju1.jpeg" class="slide2">
+                                <img src="../image/jeju3.jpg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>성산일출봉</li>
+                            <li>한라산</li>
+                        </ul>
+                    </div>
+                    <div id="area5">
+                        <h3 class="area_btn">순천</h3>
+                        <div id="area_1" class="subMenu">
+                            <div class="subArea1">
+                                <img src="../image/sooncheon1.jpeg" class="slide1">
+                                <img src="../image/sooncheon3.jpeg" class="slide1">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>순천만국가정원</li>
+                            <li>순천만습지</li>
+                        </ul>
+                        <h3 class="area_btn">태안</h3>
+                        <div id="area_2" class="subMenu">
+                            <div class="subArea2">
+                                <img src="../image/tean1.jpeg" class="slide2">
+                                <img src="../image/tean3.jpeg" class="slide2">
+                            </div>
+                        </div>
+                        <ul class="area_list">
+                            <li>천리포수목원</li>
+                            <li>팜카밀레</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </article>
+            <!-- 지역 설명 -->
+            <div id="contentBox">
+                <h3><a href="../cafe/cafe_DanYang.html" id="moveCafe">단양 식당, 카페 알아보기</a></h3>
+                <div class="box">
+                    <div class="area_image">
+                        <img src="../image/danyang2.jpg">
+                    </div>
+                    <div class="area_info">
+                        <br>
+                        <h2>만천하</h2>
+                        <br><hr color="black"><br><br><br>
+                        <h2>상세정보</h2>
+                        <br><br><br>
+                        <table>
+                            <tr><th class="content_th">주소</th><td class="content_td">단양군 적성면 애곡리 94번지</td></tr>
+                            <tr><th class="content_th">사이트</th><td><a href="https://www.dytc.or.kr/" class="content_td">https://www.dytc.or.kr/</a></td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="area_info">
+                        <br>
+                        <h2>단양 패러글라이딩</h2>
+                        <br><hr color="black"><br><br><br>
+                        <h2>상세정보</h2>
+                        <br><br><br>
+                        <table>
+                            <tr><th class="content_th">주소</th><td class="content_td">단양군 가곡면 사평리 246-6</td></tr>
+                            <tr><th class="content_th">사이트</th><td><a href="http://www.dypara.com/" class="content_td">http://www.dypara.com/</a></td></tr>
+                        </table>
+                    </div>
+                    <div class="area_image">
+                        <img src="../image/danyang4.jpeg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="underline"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="copyright">Copyright © 싸강힘드시조 Website 2023</span>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline quicklinks">
+                            <li><a href="#">송지현</a>
+                            </li>
+                            <li><a href="#">장승헌</a>
+                            </li>
+                            <li><a href="#">서준영</a>
+                            </li>
+                            <li><a href="#">김민열</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

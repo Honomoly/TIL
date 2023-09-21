@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window_location.html</title>
+    <script>
+        function hrefMove() {
+            // href는 속성으로 사용! (메소드 불가)
+            location.href = "https://www.google.com";
+        }
+        function assignMove() {
+            location.assign("https://www.daum.net");
+        }
+        function replaceMove() {
+            // back버튼 사용 불가
+            location.replace("https://www.youtube.com");
+        }
+    </script>
+</head>
+<body>
+    <a href="https://www.naver.com">네이버</a> <br><br>
+    <button onClick="hrefMove()">구글</button>
+    <button onClick="assignMove()">다음</button>
+    <button onClick="replaceMove()">유튜브</button>
+</body>
+</html>

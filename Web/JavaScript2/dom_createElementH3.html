@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : createElement()</title>
+    <script>
+        window.onload = function() {
+            // 1단계 : 요소(노드) 생성
+            // <h3> 요소 생성
+            let h3 = document.createElement("h3");
+
+            // 출력할 텍스트 요소 생성
+            let text = document.createTextNode("출력할 텍스트 : 장승헌");
+
+            // 2단계 : 생성한 요소를 태그에 추가
+            // 텍스트를 <h3>에 추가
+            h3.appendChild(text);
+
+            // <h3>을 <body>에 추가
+            document.body.appendChild(h3);
+            
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

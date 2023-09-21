@@ -1,0 +1,26 @@
+#headerBox {
+	height:60px;
+	line-height:60px; /* 줄간격 - 수직으로 가운데 정렬 효과 */
+	padding:0;
+}
+
+#logoBox {
+	float:left;
+	height:60px;
+	line-height:60px;
+}
+
+/* js에서 addClass()로 적용할 css */
+.mainMenuFixed {
+	position: fixed;
+	top: 0px;
+}
+
+.mainMenuShadow {
+	box-shadow:0 3px 5px 0px gray;
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+.slidShowPosition {
+	top:35px;
+}

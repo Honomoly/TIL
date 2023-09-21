@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in 문</title>
+    <script>
+        let fruits = ["사과", "포도", "복숭아"];
+
+        // 배열로서 for문을 구성하지만 매개변수에는 실제값이 아닌 index값을 가져온다
+        for (let fr in fruits) {
+            document.write(fr + "<br>");
+        }
+
+        document.write("<hr>")
+
+        for (let fr in fruits) {
+            document.write(fruits[fr] + "<br>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

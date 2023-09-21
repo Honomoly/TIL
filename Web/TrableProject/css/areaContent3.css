@@ -1,0 +1,69 @@
+#area_1, #area_2 {
+    margin: 0 auto;
+    width: 800px;
+    height: 480px;
+    text-align: center;
+    overflow: hidden;
+}
+.subArea1, .subArea2 {
+    position: relative;
+    width: 4000px;
+    height: 480px;
+}
+.slide1, .slide2{
+    float: left;
+    width: 800px;
+    height: 480px;
+}
+.box{
+    position: relative;
+    margin: 25px auto;
+    bottom: -40px;
+    width: 1224px;
+    height: 600px;
+    display: flex;
+}
+.area_image {
+    position: relative;
+    margin: 10px;
+    margin-top: 12px;
+    width: 768px;
+    height: 576px;
+    border: solid 1px black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.area_image img {
+    width: 100%;
+    height: 100%;
+}
+.area_info {
+    margin: 20px;
+    width: 352px;
+    height: 576px;
+    background: #d6d37a;
+    border-radius: 20px;
+}
+#moveCafe {
+    text-decoration: none;
+    color: red;
+}
+#moveCafe:hover {color: blue;}
+.content_th {width: 16%;}
+.content_td {width: 84%;}
+#prevNextButtonBox1 { position:relative; z-index:10;}
+#prevButton1 {display: none; position:absolute; top:210px; left:20%; opacity:0.2; cursor:pointer;}
+#nextButton1 {display: none; position:absolute; top:210px; right:20%; opacity:0.2; cursor:pointer;}
+#prevButton1:hover {opacity:1;}
+#nextButton1:hover {opacity:1;}
+
+#prevNextButtonBox2 { position:relative; z-index:10;}
+#prevButton2 {display: none; position:absolute; top:780px; left:20%; opacity:0.2; cursor:pointer;}
+#nextButton2 {display: none; position:absolute; top:780px; right:20%; opacity:0.2; cursor:pointer;}
+#prevButton2:hover {opacity:1;}
+#nextButton2:hover {opacity:1;}
+
+#area2{display: none;}
+#area1{display: none;}
+#area4{display: none;}
+#area5{display: none;}

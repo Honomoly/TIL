@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break 문</title>
+    <script>
+        /*
+        자신이 속한 반복문의 바깥에 있는 반복문을 빠져나오기 위해서는 해당 반복문에
+        label을 할당하여 break (라벨명); 으로 입력한다
+        */
+        for (let i=1; i<=5; i++) {
+            for (let j=1; j<=4; j++) {
+                document.write(i+" : "+j+"<br>")
+                if (j==3) {
+                    break;
+                }
+            }
+        }
+
+        document.write("<hr>");
+
+        // 첫 반복문에 outter라는 label 할당
+        outter:for (let i=1; i<=5; i++) {
+            for (let j=1; j<=4; j++) {
+                document.write(i+" : "+j+"<br>")
+                if (j==3) {
+                    break outter;
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

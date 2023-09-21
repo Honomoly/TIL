@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제</title>
+    <script>
+        input = parseInt(prompt("숫자 입력"));
+        /*
+        let count = 1;
+        while (count<=input) {
+            if (count%3==1) {
+                document.write("<img src='image/cherry.png'>")
+            } else if (count%3==2) {
+                document.write("<img src='image/bomb.png'>")
+            } else {
+                document.write("<img src='image/apple.png'>")
+            }
+            count++
+        }
+        */
+        for (let i=1; i<=input; i++) {
+            switch (i%3) {
+                case 0: document.write("<img src='image/apple.png'>"); break;
+                case 1: document.write("<img src='image/cherry.png'>"); break;
+                case 2: document.write("<img src='image/bomb.png'>"); break;
+            } 
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

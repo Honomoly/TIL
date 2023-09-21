@@ -1,0 +1,89 @@
+/* 헤더 부분 */
+/* 모든 컨텐츠를 포함하는  box */
+#wrap {
+  margin: 0 auto;
+	width:1280px;
+	background-color:#fffbdf;
+  text-align: center;
+}
+
+/* 모든 <img> 테그 테두리 없음 */
+img { border:0; margin:0;}
+
+#headerBox {
+	height:112px;
+	line-height:112px; /* 줄간격 - 수직으로 가운데 정렬 효과 */
+	padding:0;
+}
+#logoImg {
+	float: left;
+	width: 300px;
+	height: 100px;
+  margin-top: 12px;
+}
+#logoBox {
+	float:left;
+	height:100px;
+	line-height:100px;
+}
+#topMenuBox {
+  float:right;
+  font-weight:bold;
+  padding-right:10px;
+ }
+
+
+/* 푸터 부분 */
+/* footer .row {
+    display: flex;
+    flex-direction: column;
+  } */
+  
+  /* col-md-4도 일렬로 정렬 */
+  .col-md-4 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* list-inline도 일렬로 정렬 */
+  .list-inline {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* list-inline 내의 li 태그를 일렬로 정렬 */
+  .list-inline li {
+    display: inline;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer span.copyright {
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+}
+
+
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
+    outline: 0;
+}
+
+/* footer */
+/* ul.social-buttons {
+    margin-bottom: 0;
+} */
+
+footer ul li{
+	display: inline-block;
+	margin: 20px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체 : class 사용</title>
+    <script>
+        // class는 Constructor(생성자), Getters, Setters 세 가지로 나뉜다
+        class Person {
+            // (1) Constructor
+            constructor(name, age, gender) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            };
+
+            // (2) Getter
+            get name() {
+                return this._name; // _(언더바) 필수!
+            };
+            get age() {
+                return this._age;
+            };
+            get gender() {
+                return this._gender;
+            };
+
+            // (3) Setter
+            set name(name1) {
+                this._name = name1; // _(언더바) 필수!
+            }
+            set age(age1) {
+                this._age = age1;
+            }
+            set gender(gender1) {
+                this._gender = gender1;
+            }
+
+            // (4) Methods
+            toString() {
+                return this.name+" "+this.age+" "+this.gender
+            }
+
+            // 언더바 없이 사용할 경우 Getter와 Setter가 무한호출 루프에 빠진다
+        };
+
+        // 객체 생성
+        let ps1 = new Person("이몽룡", 26, "남자");
+        let ps2 = new Person("성춘향", 24, "여자");
+
+        // Getter 호출
+        console.log(ps1.name, ps1.age, ps1.gender);
+        console.log(ps2.name, ps2.age, ps2.gender);
+
+        // Setter 호출
+        ps2.setName = "홍길동"; ps2.setAge = 28; ps2.setGender = "남자";
+        console.log(ps1.name, ps1.age, ps1.gender);
+        console.log(ps2.name, ps2.age, ps2.gender);
+
+        // Method 호출
+        console.log(ps1.toString());
+        console.log(ps2.toString());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

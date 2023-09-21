@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 매개변수</title>
+    <script>
+        // 예금액과 이자율을 입력 받아 이자를 출력
+        function input() {
+            let deposit = parseInt(prompt("예금액 입력", "원"));
+            let rate = Number(prompt("이자율 입력", "%"));
+            calInterest(deposit, rate);
+        }
+
+        // 실제로 이자를 계산하여 출력
+        function calInterest(deposit, rate) {
+            let interest = deposit * rate /100;
+            document.write("예금이자 : " + parseInt(interest) + "원");
+        }
+
+
+    </script>
+</head>
+<body onload="input()">
+    
+</body>
+</html>

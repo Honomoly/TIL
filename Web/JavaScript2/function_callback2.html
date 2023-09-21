@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콜백함수 : 일반함수의 경우</title>
+    <script>
+        function info(name, gender, age) {
+            console.log("이름 : "+name+", 성별 : "+gender+", 나이 : "+age);
+        }
+
+        function show(name, gender, age, stt) {
+            console.log("입력 정보");
+            stt(name, gender, age);
+        }
+
+        show("장승헌", "남자", 26, info);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

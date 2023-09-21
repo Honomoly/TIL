@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체 : Literal 방식</title>
+    <script>
+        let person = {
+            // 속성(property)
+            name : "장승헌",
+            age : 26,
+            gender : "남자",
+
+            // 메소드(method)
+            getName : function() {
+                return this.name;
+                /*
+                여기서 this는 python class의 self와 비슷한 역할이다
+                객체 밖에서 person.name을 쓴 것과 동일한 효과를 낸다는 말이다
+                */
+            }
+        }
+
+        // 객체 각각 출력해보기
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.gender);
+        console.log(person.getName());
+
+        // 속성만 넣어보기
+        let car = {
+            no : "11가1234",
+            name : "소나타",
+            maker : "현대",
+            year : 2002,
+            cc : 2000
+        }
+
+        // 전체 출력해보기
+        for (let i in car) { // 이 때의 index인 i는 property의 이름이다!
+            console.log(i, car[i]);
+        }
+
+        let circle = {
+            center : {x:1.0, y:2.0}, // 객체 안에 객체생성 가능
+            radius : 2.5,
+            getArea : function() {
+                console.log("Area : ", Math.PI*(this.radius**2));
+            },
+            showCenter : function() {
+                console.log("Center : ", this.center.x, ", ", this.center.y);
+            }
+        }
+
+        circle.getArea(); circle.showCenter();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

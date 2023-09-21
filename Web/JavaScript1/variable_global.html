@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역 변수</title>
+    <script>
+        let x = 5, y = 10; // let을 사용한 명시적 선언
+        total = 0; // 비명시적 선언
+
+        function f1() {
+            x += y; // 함수 내 비명시적 선언
+            document.write(x + "<br>");
+        }
+
+        function f2() {
+            total = x + y; //함수 내 비명시적 선언
+            document.write(total + "<br>");
+        }
+
+        f1();
+        f2();
+
+        let name = "장승헌"; // 명시적 선언
+        
+        function showName() {
+            document.write("이름 : " + name);
+        }
+
+        showName();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

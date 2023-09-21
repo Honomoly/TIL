@@ -1,0 +1,1 @@
+print(__name__) # 값에 __main__으로 저장된 built-in special variable

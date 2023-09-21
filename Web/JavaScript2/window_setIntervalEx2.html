@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제</title>
+    <script>
+
+        function startCount() {
+            count = 1;
+            timerID = setInterval(showCount, 1000);
+            showCount();
+        }
+
+        function showCount(){
+            count_num.innerHTML = 11-count;
+            count_img.innerHTML = `<img src="image/bomb${count}.jpg">`;
+            if (count == 11) {
+                clearInterval(timerID);
+            }
+            count++;
+        }
+    </script>
+</head>
+<body>
+    <div align="center" id="wrap">
+        <h2 id="count_num">시작</h2>
+        <div id="count_img"></div>
+        <div>
+            <button onClick="startCount()">카운트 다운 시작</button>
+        </div>
+    </div>
+</body>
+</html>

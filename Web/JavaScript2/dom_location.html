@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script>
+        // id로 DOM요소 찾아오려면 로드가 끝난 후에!
+        
+        // 1. 잘못된 위치
+        // let box = document.getElementById('Box');
+        // box.innerHTML = "변경"
+        
+        // 3. 객체를 통한 로드 후의 위치 (화살표 함수 사용 가능)
+        window.onload = function() {
+            let box = document.getElementById('Box');
+            box.innerHTML = "변경"
+        }
+    </script>
+</head>
+<body>
+    <div id="Box">Box</div>
+    <!-- 
+    2. body내 로드 후의 위치
+    <script>
+    let box = document.getElementById('Box');
+        box.innerHTML = "변경"
+    </script>
+     -->
+
+</body>
+</html>

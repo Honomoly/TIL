@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체</title>
+    <script>
+        // Array() 클래스로부터 객체 생성
+        let fruits = new Array("사과", "포도", "복숭아", "딸기");
+
+        document.write("모든 요소 출력 : ");
+        for (let i=0; i<fruits.length; i++) {
+            document.write(fruits[i]+" ");
+        }
+
+        fruits.shift();
+        document.write("<br><br>첫 번째 요소 제거 shift() : ");
+        for (let i=0; i<fruits.length; i++) {
+            document.write(fruits[i]+" ");
+        }
+
+        fruits.unshift("배");
+        document.write("<br><br>맨 앞에 요소 추가 unshift() : ");
+        for (let i=0; i<fruits.length; i++) {
+            document.write(fruits[i]+" ");
+        }
+
+        fruits.pop();
+        document.write("<br><br>마지막 요소 제거 pop() : ");
+        for (let i=0; i<fruits.length; i++) {
+            document.write(fruits[i]+" ");
+        }
+
+        fruits.push("수박");
+        document.write("<br><br>마지막에 요소 추가 push() : ");
+        for (let i=0; i<fruits.length; i++) {
+            document.write(fruits[i]+" ");
+        }
+
+        fruits.reverse();
+        document.write("<br><br>역순으로 변경 reverse() : ");
+        for (let i=0; i<fruits.length; i++) {
+            document.write(fruits[i]+" ");
+        }
+
+        fruits.sort();
+        document.write("<br><br>오름차순 정렬 sort() : ");
+        for (let i=0; i<fruits.length; i++) {
+            document.write(fruits[i]+" ");
+        }
+
+        fruits.splice(2, 1, "망고", "오렌지");
+        document.write("<br><br>2위치에 1개 삭제후 ~ 대입 push(2,1,~) : ");
+        for (let i=0; i<fruits.length; i++) {
+            document.write(fruits[i]+" ");
+        }
+
+        // 새 배열 생성
+        let newFruits = fruits.slice(1,4);
+        document.write("<br><br>1부터 4직전까지 추출 slice(1,4) : ");
+        for (let i=0; i<newFruits.length; i++) {
+            document.write(newFruits[i]+" ");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

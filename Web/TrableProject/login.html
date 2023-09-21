@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#loginBtn').on('click', function(e) {
+                e.preventDefault(); // 폼 제출을 중지
+                window.location.href = 'index.html'; // index.html 페이지로 이동
+            });
+        });
+    </script>
+    <div id="wrap">
+        <img id="bg-img" src="travel.jpg" alt="">
+        <div id="content-wrap">
+            <div id="login">
+                <h2 align="center">로그인</h2>
+               
+                <hr>
+                <form id="loginform" name="loginform">
+                    <table align="center">
+                        <tr><br><br></tr>
+                        <tr>
+                            <td class="write">아이디</td>
+                            <td><input type="text" id="id" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td class="write">비밀번호</td>
+                            <td><input type="password" id="pw" size="30" ></td>
+                        </tr>
+                        <tr >
+                            <td id="sb"  colspan="2" align="center">
+                                <input type="submit" value="로그인" id="loginBtn">
+                                <input type="reset" value="다시 입력" id="loginBtn">
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </form>
+    
+            </div>
+
+            <br><br><br>
+        
+            <div id="member" class="write">함께 여행을 떠나볼까요?<br>
+                <button id="btn" onclick="location.href='membership.html'">회원가입</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
