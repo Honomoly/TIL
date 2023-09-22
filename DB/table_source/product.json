@@ -1,0 +1,130 @@
+[
+ {
+   "prdNo": 1,
+   "prdName": "삼성 냉장고 비스포크",
+   "prdPrice": 1620000,
+   "prdMaker": "삼성전자",
+   "prdColor": "새틴 코럴",
+   "ctgNo": 1
+ },
+ {
+   "prdNo": 2,
+   "prdName": "LG 디오스 와인셀러",
+   "prdPrice": 1367000,
+   "prdMaker": "LG전자",
+   "prdColor": "검정",
+   "ctgNo": 1
+ },
+ {
+   "prdNo": 3,
+   "prdName": "QLED 8K TV",
+   "prdPrice": 2175000,
+   "prdMaker": "삼성전자",
+   "prdColor": "블랙",
+   "ctgNo": 1
+ },
+ {
+   "prdNo": 4,
+   "prdName": "올레드 TV 55",
+   "prdPrice": 799000,
+   "prdMaker": "LG전자",
+   "prdColor": "검정",
+   "ctgNo": 1
+ },
+ {
+   "prdNo": 5,
+   "prdName": "UHD 커브드 65인치",
+   "prdPrice": 2250000,
+   "prdMaker": "삼성전자",
+   "prdColor": "은색",
+   "ctgNo": 1
+ },
+ {
+   "prdNo": 6,
+   "prdName": "유아용 세발 자전거",
+   "prdPrice": 76000,
+   "prdMaker": "삼천리 자전거",
+   "prdColor": "빨강",
+   "ctgNo": 3
+ },
+ {
+   "prdNo": 7,
+   "prdName": "로드 사이클 자전거",
+   "prdPrice": 150000,
+   "prdMaker": "알톤",
+   "prdColor": "검정",
+   "ctgNo": 3
+ },
+ {
+   "prdNo": 8,
+   "prdName": "여성용 클래식 자전거",
+   "prdPrice": 100000,
+   "prdMaker": "알톤",
+   "prdColor": "핑크",
+   "ctgNo": 3
+ },
+ {
+   "prdNo": 9,
+   "prdName": "노트북9 metal",
+   "prdPrice": 1390000,
+   "prdMaker": "도시바",
+   "prdColor": "은색",
+   "ctgNo": 2
+ },
+ {
+   "prdNo": 10,
+   "prdName": "HP 게이밍 노트북",
+   "prdPrice": 1200000,
+   "prdMaker": "HP",
+   "prdColor": "흰색",
+   "ctgNo": 2
+ },
+ {
+   "prdNo": 11,
+   "prdName": "32인치 LED 모니터",
+   "prdPrice": 299000,
+   "prdMaker": "LG전자",
+   "prdColor": "검정",
+   "ctgNo": 2
+ },
+ {
+   "prdNo": 12,
+   "prdName": "광시야각 LED 모니터",
+   "prdPrice": 195000,
+   "prdMaker": "삼성전자",
+   "prdColor": "흰색",
+   "ctgNo": 2
+ },
+ {
+   "prdNo": 13,
+   "prdName": "등산배낭 옵티마",
+   "prdPrice": 68000,
+   "prdMaker": "밀레",
+   "prdColor": "자주",
+   "ctgNo": 4
+ },
+ {
+   "prdNo": 14,
+   "prdName": "35L 등산배낭",
+   "prdPrice": 49000,
+   "prdMaker": "(주)셀파",
+   "prdColor": "노랑",
+   "ctgNo": 4
+ },
+ {
+   "prdNo": 15,
+   "prdName": "원터치 자동 텐트",
+   "prdPrice": 58000,
+   "prdMaker": "이지트래블러",
+   "prdColor": "그린",
+   "ctgNo": 4
+ },
+ {
+   "prdNo": 16,
+   "prdName": "그늘막 텐트",
+   "prdPrice": 33000,
+   "prdMaker": "밀레",
+   "prdColor": "그린",
+   "ctgNo": 4
+ }
+]

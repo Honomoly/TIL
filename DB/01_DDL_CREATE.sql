@@ -1,139 +1,200 @@
--- 스키마 생성
-CREATE SCHEMA sqldb1 DEFAULT CHARACTER SET 'utf8';
-CREATE SCHEMA sqldb2 DEFAULT CHARACTER SET 'utf8mb4';
 
--- 스키마 삭제
+-- 스키마 (데이터베이스) 생성
+CREATE SCHEMA sqldb1 DEFAULT CHARACTER SET utf8;
+CREATE SCHEMA sqldb2 DEFAULT CHARACTER SET UTF8MB4;
+CREATE DATABASE sqldb3 DEFAULT CHARACTER SET UTF8MB4;
+
+-- 스키마 (데이터베이스) 삭제
 DROP SCHEMA sqldb1;
-DROP SCHEMA sqldb2;
+DROP DATABASE sqldb2;
+DROP DATABASE sqldb3;
 
---
-CREATE SCHEMA sqldb1 DEFAULT CHARACTER SET 'utf8mb4';
-
+-- -------------------------------------------------------
+use sqldb1;
 
 
 -- 테이블 생성
-CREATE TABLE product(
+-- 제약 조건 
+	-- 기본키 : prdNo, NOT NULL
+    -- prdName : NOT NULL
+CREATE TABLE product (
 	prdNo VARCHAR(10) NOT NULL PRIMARY KEY,
     prdName VARCHAR(30) NOT NULL,
     prdPrice INT,
-    prdCompany VARCHAR(30)
+    pridComapny VARCHAR(30)
 );
 
-CREATE TABLE product2(
-	prdNo VARCHAR(10) NOT NULL PRIMARY KEY,
+CREATE TABLE product2 (
+	prdNo VARCHAR(10),
     prdName VARCHAR(30) NOT NULL,
     prdPrice INT,
-    prdCompany VARCHAR(30)
+    pridComapny VARCHAR(30),
+    PRIMARY KEY(prdNo)
 );
--- 제약조건 따로 걸기
-CREATE TABLE product3(
+
+CREATE TABLE product3 (
 	prdNo VARCHAR(10) NOT NULL,
     prdName VARCHAR(30) NOT NULL,
     prdPrice INT,
-    prdCompany VARCHAR(30),
-    CONSTRAINT PK_product_prdNo PRIMARY KEY (prdNo)
-    /*
-		CONSTRAINT [제약조건명] : 제약조건에 이름을 붙여 나중에 삭제/추가를 용이하게 만든다
-        PRIMARY KEY ([컬럼명]) : 주어진 컬럼에 기본키 설정을 할당
-	*/
+    pridComapny VARCHAR(30),
+    CONSTRAINT PK_prduct_prdNo PRIMARY KEY (prdNo)
 );
 
--- 기본키/외래키 제약조건 설정
+-- 기본키 / 외래키 제약조건 설정
+-- publisher : 출판사 테이블
+-- book : 도서 테이블
+
 /*
-출판사 테이블 생성
-pubNo가 기본키
-pubName은 NOT NULL
+	출판사 테이블 생성 (출판사번호, 출판사명)
+    - 기본키로 pubNo 지정, NOT NULL
+    - pubName은 NOT NULL로 설정
 */
-CREATE TABLE publisher(
+
+CREATE TABLE publisher (
 	pubNo VARCHAR(10) NOT NULL PRIMARY KEY,
     pubName VARCHAR(30) NOT NULL
 );
+
 /*
-도서 테이블 생성 (도서번호, 도서명, 가격, 발행일, 출판사번호)
-bookNo가 기본키
-pubNo가 외래키로 들어감
+	도서 테이블 생성 (도서번호, 도서명, 가격, 발행일, 출판사번호)
+    제약조건 설정
+    - 기본키 : bookNo, NOT NULL
+    - 외래키 : pubNo (참조하는 테이블과 기본키 지정)
+    - bookPrice : 기본값 10000, 1000 보다 크게 설정
 */
-CREATE TABLE book(
+
+CREATE TABLE book (
 	bookNo VARCHAR(10) NOT NULL PRIMARY KEY,
     bookName VARCHAR(30) NOT NULL,
     bookPrice INT DEFAULT 10000 CHECK(bookPrice > 1000),
     bookDate DATE,
-    pubNo VARCHAR(10) NOT NULL,
-    FOREIGN KEY (pubNo) REFERENCES publisher (pubNo)
-    -- FOREIGN KEY (현재 테이블 열 이름)  REFERENCES 참조 테이블 (참조 테이블의 기본키)
+    pubNo VARCHAR(10) NOT NULL, -- 외래키로 사용하는 열이름 (필수)
+    FOREIGN KEY (pubNo) REFERENCES publisher (pubNo)  -- 외래키 제약조건 설정
+    -- FOREIGN KEY (현재 테이블의 열이름) REFERENCES 참조하는 테이블명 (참조테이블의 기본키)
 );
 
-DESCRIBE book;
+CREATE TABLE book2 (
+	bookNo VARCHAR(10) NOT NULL PRIMARY KEY,
+    bookName VARCHAR(30) NOT NULL,
+    bookPrice INT DEFAULT 10000 CHECK(bookPrice > 1000),
+    bookDate DATE,
+    pubNo VARCHAR(10) NOT NULL, -- 외래키로 사용하는 열이름 (필수)
+    CONSTRAINT FK_book_publisher  FOREIGN KEY (pubNo) REFERENCES publisher (pubNo)  -- 외래키 제약조건 설정
+    -- FOREIGN KEY (현재 테이블의 열이름) REFERENCES 참조하는 테이블명 (참조테이블의 기본키)
+);
 
--- 연습1
+-- 테이블 상세 정보 확인
+describe book;
+-- PRI : 기본키
+-- MUL : 중복 가능한 키 (외래키)
+
+/*
+	테이블 생성 및 기본키/외래키 제약조건 설정 연습문제
+	- 학생(student)과 학과(department) 테이블 생성하고 데이터 입력 (각 3개씩)
+		- 제약 조건
+		- 기본키 / 외래키 설정
+		- 학생은 학과에 소속
+		- 학생명과 학과명은 NULL 허용하지 않음
+		- 학년은 4를 기본값으로, 범위를 1~4로 설정
+			(AND 키워드  사용)
+*/
+
 CREATE TABLE department(
-    dep VARCHAR(30) NOT NULL PRIMARY KEY
+	deptID VARCHAR(10) PRIMARY KEY,
+    deptName VARCHAR(10) NOT NULL
 );
 
 CREATE TABLE student(
-	 student_name VARCHAR(20) NOT NULL PRIMARY KEY,
-     dep VARCHAR(30) NOT NULL,
-     student_year INT CHECK(student_year >= 1 AND student_year <= 4),
-     FOREIGN KEY (dep) REFERENCES department (dep)
+	stdID VARCHAR(10) PRIMARY KEY,
+	stdName VARCHAR(10) NOT NULL,
+	stdGrade INT DEFAULT 4 CHECK(stdGrade>=1 AND stdGrade<=4),
+    deptID VARCHAR(10) NOT NULL,
+    CONSTRAINT FK_student_department FOREIGN KEY (deptID) REFERENCES department(deptID)
 );
 
--- 연습2
+
+/*
+	테이블 생성 및 기본키/외래키 제약조건 설정 연습문제2
+		부서(department) / 직원(employee) 테이블 생성
+		기본키 / 외래키 설정
+		직원은 부서에 소속
+		직원명과 부서명은 NULL 허용하지 않음
+*/
+
+CREATE TABLE department2 (
+	depNo VARCHAR(10) NOT NULL PRIMARY KEY,
+    depName VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE employee (
+	empNo VARCHAR(10) NOT NULL PRIMARY KEY,
+    empName VARCHAR(10) NOT NULL,
+    depNo VARCHAR(10) NOT NULL,
+    CONSTRAINT FK_department_no FOREIGN KEY (depNo) REFERENCES department2 (depNo)
+);
+
+/*
+	테이블 생성 및 기본키/외래키 제약조건 설정 연습문제3
+		카테고리(category) / 상품(product) 테이블 생성
+		기본키 / 외래키 설정
+		상품은 카테고리 별로 분류 
+		카테고리명은 NULL 허용하지 않음
+*/
+CREATE TABLE category (
+    ctgID INT NOT NULL PRIMARY KEY,
+    ctgName VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE product (
+    productID INT NOT NULL PRIMARY KEY,
+    productName VARCHAR(30) NOT NULL,
+    ctgID INT NOT NULL,
+    CONSTRAINT fk_product_category FOREIGN KEY (ctgID) REFERENCES category(ctgID)
+);
+
+/*
+	테이블 생성 및 기본키/외래키 제약조건 설정 연습문제4
+		- 그림과 같이 테이블 생성하고 기본키 외래키 설정
+        - 5개 테이블 : 학과, 학생, 교수, 과목, 성적
+*/
 CREATE TABLE department(
-	dept_num INT NOT NULL PRIMARY KEY,
-	dept_name VARCHAR(30) NOT NULL
-);
-
-CREATE TABLE employee(
-	emp_name VARCHAR(20) NOT NULL PRIMARY KEY,
-    emp_year INT,
-    dept_num INT NOT NULL,
-    FOREIGN KEY (dept_num) REFERENCES department (dept_num)
-);
-
--- 연습4
-CREATE TABLE department(
-	dpt_num INT NOT NULL PRIMARY KEY,
-    dpt_name VARCHAR(30),
-    dpt_tel VARCHAR(20)
+	deptNo VARCHAR(10) PRIMARY KEY,
+    deptName VARCHAR(30) NOT NULL,
+    depPhone VARCHAR(13)
 );
 
 CREATE TABLE student(
-	std_num INT NOT NULL PRIMARY KEY,
-    std_name VARCHAR(30) NOT NULL,
-    std_year INT CHECK(std_year >= 1 AND std_year <= 4),
-    std_tel VARCHAR(20),
-    std_address VARCHAR(40),
-    dpt_num INT,
-    FOREIGN KEY (dpt_num) REFERENCES department (dpt_num)
+	stdNo VARCHAR(10) PRIMARY KEY,
+	stdName VARCHAR(30) NOT NULL,
+	stdYear INT DEFAULT 4 CHECK(stdYear>=1 AND stdYear<=4),
+    stdPhone VARCHAR(13),
+    stdAddress VARCHAR(30),
+    deptNo VARCHAR(10) NOT NULL,
+    CONSTRAINT FK_student_department FOREIGN KEY (deptNo) REFERENCES department(deptNo)
 );
 
 CREATE TABLE professor(
-	prof_id VARCHAR(20) NOT NULL PRIMARY KEY,
-    prof_name VARCHAR(20),
-    prof_tel VARCHAR(20),
-    dpt_num INT,
-    FOREIGN KEY (dpt_num) REFERENCES department (dpt_num)
+	profID VARCHAR(10) PRIMARY KEY,
+    profName VARCHAR(30) NOT NULL,
+    profTel VARCHAR(10),
+    deptNo VARCHAR(10) NOT NULL,
+    CONSTRAINT FK_professor_department FOREIGN KEY (deptNo) REFERENCES department(deptNo)
 );
 
 CREATE TABLE course(
-	course_id VARCHAR(20) NOT NULL PRIMARY KEY,
-    course_title VARCHAR(40),
-    course_credit INT,
-    prof_id VARCHAR(20),
-    FOREIGN KEY (prof_id) REFERENCES professor (prof_id)
+	courseId VARCHAR(10) PRIMARY KEY,
+    courseTitle VARCHAR(30) NOT NULL,
+    courseCredit INT,
+    profID VARCHAR(10),
+    CONSTRAINT FK_course_professor FOREIGN KEY (profID) REFERENCES professor(profID)
 );
 
-CREATE TABLE score(
-	std_num INT,
-    course_id VARCHAR(20),
-	CONSTRAINT FK_score_std FOREIGN KEY (std_num) REFERENCES student (std_num),
-    CONSTRAINT FK_score_course FOREIGN KEY (course_id) REFERENCES course (course_id),
-    CONSTRAINT PK_num_id PRIMARY KEY (std_num, course_id) -- 복합키 설정
-);
-
-
--- 자동증가
-CREATE TABLE board(
-	boardNo INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    boardName VARCHAR(30)
+CREATE TABLE scores(
+	stdNo VARCHAR(10) NOT NULL,
+    courseId VARCHAR(10) NOT NULL,    
+    score INT,
+    grade VARCHAR(3),
+    CONSTRAINT PK_scores_stdNo_courseId PRIMARY KEY(stdNo, courseId), -- 복합키
+    CONSTRAINT FK_score_student FOREIGN KEY (stdNo) REFERENCES student(stdNo),
+    CONSTRAINT FK_score_course FOREIGN KEY (courseId) REFERENCES course(courseId)
 );
