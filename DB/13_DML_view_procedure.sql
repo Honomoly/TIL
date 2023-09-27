@@ -44,8 +44,8 @@ DELIMITER $$
 CREATE PROCEDURE clientProc()
 BEGIN
 	SELECT * FROM client;
-END $$
-DELIMITER ;
+END
+$$ DELIMITER ;
 -- 호출
 CALL clientProc();
 
