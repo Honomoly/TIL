@@ -20,5 +20,6 @@ from django.urls import include, path
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("first_app.urls"))
-    # root로 접속한다는 말 : http://127.0.0.1:8000/
+    # root 경로(http://127.0.0.1:8000/)에서 시작하여 뒤에 path명이 붙기 시작한다
+    # 아무것도 없으면 first_app의 urls로 연결된다는 말이다
 ]

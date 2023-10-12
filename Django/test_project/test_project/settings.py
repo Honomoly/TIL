@@ -118,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-# 기본 static 폴더로 지정한다
+# 기본 static 폴더를 지정한다
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]

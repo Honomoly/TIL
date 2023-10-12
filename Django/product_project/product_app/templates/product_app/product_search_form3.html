@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% block content %}
+
+    <h2>상품 검색 by 편법</h2>
+    <form id="prdSearchForm3" method="post">
+        {% csrf_token %}
+        <select name="type" id="type3">
+            <option value="">검색조건 선택</option>
+            <option value="prd_name">상품명</option>
+            <option value="prd_maker">제조회사</option>
+        </select>
+        <input type="text" name="keyword" id="keyword3">
+        <button type="submit" class="btn">검색</button>
+    </form>
+    
+    <!-- 여기는 검색 결과 출력 -->
+    <div id="searchResultBox3"></div>
+
+{% endblock content %}

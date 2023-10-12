@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2>도서 목록</h2>
+    <table class="book_list">
+        <tr>
+            <th>도서번호</th>
+            <th>도서명</th>
+            <th>저자</th>
+            <th>가격</th>
+            <th>출판일자</th>
+            <th>재고수량</th>
+            <th>출판사</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for book in books %}
+        <tr>
+            <td><a href="{% url 'book_detail' book.book_no %}">{{ book.book_no }}</a></td>
+            <td>{{ book.book_name }}</td>
+            <td>{{ book.book_author }}</td>
+            <td>{{ book.book_price }}</td>
+            <td>{{ book.book_date }}</td>
+            <td>{{ book.book_stock }}</td>
+            <td>{{ book.pub_no }}</td>
+            <td><a href="{% url 'book_update' book.book_no %}"><button>수정</button></a></td>
+            <td><a href="{% url 'book_delete' book.book_no %}" onclick="return confirm('삭제하시겠습니까?')"><button>삭제</button></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

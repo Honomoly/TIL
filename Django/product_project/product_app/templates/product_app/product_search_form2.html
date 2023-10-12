@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% block content %}
+
+    <h2>상품 검색 by Ajax</h2>
+    <form id="prdSearchForm2" method="post">
+        {% csrf_token %}
+        <select name="type" id="type2">
+            <option value="">검색조건 선택</option>
+            <option value="prd_name">상품명</option>
+            <option value="prd_maker">제조회사</option>
+        </select>
+        <input type="text" name="keyword" id="keyword2">
+        <button type="submit" class="btn">검색</button>
+    </form>
+    
+    <!-- 여기는 검색 결과 출력 -->
+    <div id="searchResultBox2"></div>
+
+{% endblock content %}
