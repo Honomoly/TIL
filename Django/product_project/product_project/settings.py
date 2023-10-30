@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize", # 유저친화적 요소 추가 / 천단위 표시같은것
     "product_app",
+    "users_app",
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,12 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# 유저모델을 추가하여 로그인 기능 구현
+AUTH_USER_MODEL = 'users_app.User'
+
+# 언어 변경
+LANGUAGE_CODE = 'ko-kr'
+
+# 로그인2 성공 후 포워딩 시키는 url 추가
+LOGIN_REDIRECT_URL = '/'

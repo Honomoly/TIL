@@ -3,7 +3,12 @@
 {% block content %}
 
     <h2>Ajax Test</h2>
-    <button id="get_data_btn">데이터 받아오기</button>
+    
+    <form id="test_form" method="post">
+        {% csrf_token %}
+        <input name="test_input" id="test_input">
+        <button type="submit">데이터 받아오기</button>
+    </form>
     <div id="result_box"></div>
 
 {% endblock content %}

@@ -82,10 +82,13 @@ def product_search(request):
     if request.method == "POST":
         type = request.POST['type']
         keyword = request.POST['keyword']
-        print(type, keyword) # 테스트 출력
+        print(type, keyword) # 터미널에 테스트 출력
 
         # filter()메소드및 Q 객체 사용
-        prd_list = Product.objects.filter(Q(prd_name__contains=keyword) | Q(prd_maker__contains=keyword))
+        if type == 'prd_name':
+            prd_list = Product.objects.filter(Q(prd_name__contains=keyword))
+        else:
+            prd_list = Product.objects.filter(Q(prd_maker__contains=keyword))
         return render(request, "product_app/product_search_form.html", {'prd_list':prd_list})
     
 # Ajax 연습
@@ -94,7 +97,9 @@ def ajax_test(request):
 
 def get_data(request):
     # 데이터 전송
-    data = {'name' : '홍길동'}
+    data = {'input_data': 'None'}
+    if request.method == 'POST':
+        data['input_data'] = request.POST['test_input']
     return JsonResponse(data)
 
 # Ajax 검색
@@ -105,8 +110,10 @@ def product_search2(request):
     if request.method == "POST":
         type = request.POST['type']
         keyword = request.POST['keyword']
-        print(type, keyword)
-        prd_list = Product.objects.filter(Q(prd_name__contains=keyword) | Q(prd_maker__contains=keyword))
+        if type == 'prd_name':
+            prd_list = Product.objects.filter(Q(prd_name__contains=keyword))
+        else:
+            prd_list = Product.objects.filter(Q(prd_maker__contains=keyword))
 
         # 여기서 쿼리 데이터셋인 prd_list를 json 타입으로 변경한다
         prd_list_json = json.loads(serializers.serialize('json', prd_list, ensure_ascii=False))
@@ -120,7 +127,9 @@ def product_search3(request):
     if request.method == "POST":
         type = request.POST['type']
         keyword = request.POST['keyword']
-        print(type, keyword)
-        prd_list = Product.objects.filter(Q(prd_name__contains=keyword) | Q(prd_maker__contains=keyword))
+        if type == 'prd_name':
+            prd_list = Product.objects.filter(Q(prd_name__contains=keyword))
+        else:
+            prd_list = Product.objects.filter(Q(prd_maker__contains=keyword))
 
         return render(request, "product_app/product_search_form3_0.html", {'prd_list':prd_list})
