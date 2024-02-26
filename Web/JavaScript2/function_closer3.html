@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운팅 : 클로저(즉시실행함수) 사용시</title>
+    <script>
+        // 익명함수의 경우와 유사한 원리
+        let count = (function() {
+            let counter = 0;
+            return function() {
+                return ++counter;
+            }
+        })();
+
+        console.log(count());
+        console.log(count());
+        console.log(count());
+        console.log(count());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

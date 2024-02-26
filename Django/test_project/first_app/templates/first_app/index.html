@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script src="{% static 'js/index.js' %}"></script>
+</head>
+<body>
+    <h1>Index Page</h1>
+    <!-- 기본으로 설정된 주소 http://127.0.0.1:8000/ -->
+    
+    <a href="/img/">Img 페이지로 이동</a><br>
+    <a href="{% url 'show_img' %}">Img 페이지로 이동</a><br>
+
+    <button id="btn">메세지 출력</button><br>
+
+    <a href="/data_form/">입력 페이지로 이동</a><br>
+    <a href="/data_form2/">입력 페이지2로 이동</a><br>
+</body>
+</html>

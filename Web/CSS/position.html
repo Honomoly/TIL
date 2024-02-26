@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 속성</title>
+    <style>
+        #parent {
+            position: absolute;
+            top:50px;
+            left:50px;
+            width: 200px;
+            height: 300px;
+            border: solid 5px #000;
+        }
+        #boxA, #boxB, #boxC {
+            width: 80px;
+            height: 80px;
+        }
+        #boxA {background-color: #f00;}
+        #boxB {background-color: #0f0;}
+        #boxC {background-color: #00f;}
+
+        /* 1. boxB에 relative 위치 지정(디폴트인 static 기준으로 함) */
+        /* 2. boxB에 absolute 위치 지정(여기선 parent 기준으로 하지만 parent가 static이면 브라우저 기준으로 함) */
+        /* 그러므로 boxB에 parent 끌의 기준으로 위치 지정은 다음과 같다
+            parent는 relative(absolute)로 지정
+            boxB는 absolute로 지정
+            parent의 relative/absolute는 기본 margin 차이 */
+            
+        #boxB {
+            position: absolute;
+            top: 10px;
+            left: 40px;
+        }
+        /* fixed는 브라우저 화면상에 위치 고정 */
+        #fixedBox {
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            top: 480px
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="boxA">A</div>
+        <div id="boxB">B</div>
+        <div id="boxC">C</div>
+    </div>
+
+    <div id="fixedBox"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

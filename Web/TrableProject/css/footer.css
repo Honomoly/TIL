@@ -1,0 +1,51 @@
+footer .row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* col-md-4도 일렬로 정렬 */
+  .col-md-4 {
+    display: flex; 
+    flex-direction: column;
+  }
+  
+  /* list-inline도 일렬로 정렬 */
+  .list-inline {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  /* list-inline 내의 li 태그를 일렬로 정렬 */
+  .list-inline li {
+    display: inline;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+footer span.copyright {
+    text-transform: uppercase;
+    text-transform: none;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+}
+
+
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
+    outline: 0;
+}
+
+/* footer */
+/* ul.social-buttons {
+    margin-bottom: 0;
+} */
+
+footer ul li{
+	display: inline-block;
+	margin: 20px;
+}

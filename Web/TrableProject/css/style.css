@@ -1,0 +1,50 @@
+#headerBox {
+	height:100px;
+	line-height:100px; /* 줄간격 - 수직으로 가운데 정렬 효과 */
+	padding:0;
+}
+
+#logoImg {
+	margin-top: 20px;
+	float: left;
+	width: 300px;
+	height: 100px;
+}
+#logoBox {
+	float:left;
+	height:100px;
+	line-height:100px;
+}
+
+.mainMenuFixed {
+	position:fixed;
+	top:-40px;
+}
+
+/* 메인 메뉴 아래에 그림자 표시 */
+.mainMenuShadow {
+	box-shadow:0 3px 5px 0px gray;
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+/* 로그인 회원가입 버튼 */
+#topMenuBox button{
+	margin-right: 20px;
+	margin-top: 30px;
+    padding: 10px 30px;
+    border-color: #2082d8;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #2082d8;
+}
+
+#topMenuBox button:hover,
+#topMenuBox button:focus{
+    border-color: #17d0d5;
+    color: #fff;
+    background-color: #17d0d5;
+}

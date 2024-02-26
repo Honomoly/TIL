@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>animate() 효과</title>
+        <style type="text/css">	
+			div {
+				width: 50px; height: 50px;
+				background-color: rgb(0, 176, 240);
+				position: relative;
+        	}
+			#box2 { top:100px; }		
+		</style>
+		<script src= "jquery-3.7.1.min.js"></script>	
+		<script type="text/javascript">	
+			$(document).ready(function() {
+				$('#box1').animate({left: '+=100'}, 500) // 원래 값에서 100만큼 누적 증가
+						  .animate({width: '+=100'}, 500)
+						  .animate({height: '+=100'}, 500);
+
+				// 2초 후 실행
+				setTimeout(function(){
+					$('div').clearQueue();
+					$('div').hide();
+				}, 2000);
+
+				$('#box2').animate({left: '+=100'}, 500)
+						  .animate({width: '+=100'}, 500)
+						  .animate({height: '+=100'}, 500);
+			});
+		</script>       
+    </head>       
+    <body>    
+        <div id="box1"></div>
+        <div id="box2"></div>
+    </body>
+</html>

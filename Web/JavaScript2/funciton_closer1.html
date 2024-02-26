@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운팅 : 전역변수 사용시</title>
+    <script>
+        // 전역변수 선언(초기화)와 함수작성
+        let count = 0;
+         
+        function increase() {
+            return ++count;
+        }
+
+        console.log(increase());
+        console.log(increase());
+        console.log(increase());
+        console.log(increase());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

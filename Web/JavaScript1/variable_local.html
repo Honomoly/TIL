@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역 변수</title>
+    <script>
+        function f1() {
+            name = "홍길동"; // 함수 내 비명시적 선언
+            let local_var1 = 100; // 함수 내 명시적 선언
+        }
+
+        function f2() {
+            document.write(name + "<br>") // 정상 출력
+            document.write(local_var1); // 오류발생!
+        }
+
+        f1();
+        f2();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

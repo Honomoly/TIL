@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 보간</title>
+    <script>
+        // 문자열 사이에 변수 삽입하기
+
+        let name = "장승헌";
+        document.write("이름 : "+name+"<br>"); // 기존 사용법
+        document.write(`이름 : ${name}`); // apostrophe 사용(키보드 1 왼쪽키)
+        console.log(`이름 : ${name}`)
+
+        function rect(width=10, height=20) {
+            return `사각형의 넓이 : ${width} x ${height} = ${width*height}`;
+        }
+
+        console.log(rect());
+        console.log(rect(30));
+        console.log(rect(40,50));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

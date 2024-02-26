@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let과 var의 차이점</title>
+    <script>
+        /*
+        var의 문제점
+        1. 동일 변수 재선언 가능
+        2. 호이스팅(앞서 쓰기 가능)
+        */
+
+        var name = "홍길동"
+        document.write(name + "<br>");
+        
+        var name = "이몽룡"
+        document.write(name + "<br>");
+
+        // let은 중복선언 불가
+
+        console.log(name);
+        var name = "성춘향";
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+    <script>
+        // Date() 클래스로부터 객체(object)를 생성
+        let today = new Date(); // new 연산자 필요!
+
+        // 객체에 메소드 함수들을 통해 변수들을 이끌어낸다
+        let year = today.getFullYear();
+        let month = today.getMonth()+1; // 0부터 시작하기 때문
+        let date = today.getDate(); // 이건 1부터 시작
+        let day; // 요일도 숫자로 출력됨
+        switch(today.getDay()) {
+            case 0: day="일"; break;
+            case 1: day="월"; break;
+            case 2: day="화"; break;
+            case 3: day="수"; break;
+            case 4: day="목"; break;
+            case 5: day="금"; break;
+            default: day="토";
+        }
+
+        let hour = today.getHours();
+        let now;
+        if (hour>=12) {
+            now = "오후";
+            if (hour>12) {
+                hour -= 12;
+            };
+        } else {
+            now = "오전"; 
+        }
+        let minute = today.getMinutes();
+        let second = today.getSeconds();
+
+        document.write(`오늘은 ${year}년 ${month}월 ${date}일 ${day}요일입니다<br>`);
+        document.write(`현재시각은 ${now} ${hour}시 ${minute}분 ${second}초입니다`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

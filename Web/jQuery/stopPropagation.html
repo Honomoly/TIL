@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopPropagation()</title>
+    <style>
+        #parent {
+            margin: 0 auto;
+            border: solid 1px blue;
+            width: 400px;
+            height: 400px;
+            padding: 40px;
+        }
+        #child {
+            margin: 0 auto;
+            border: solid 1px red;
+            width: 50%;
+            height: 50%;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        // 자식 요소에서의 실행이 부모 영역까지 퍼지는 것을 막아주는 역할
+        $(document).ready(function() {
+            $('#parent')
+                .on('mouseover', function(){
+                    $(this).css('background','blue');
+                })
+                .on('mouseout', function(){
+                    $(this).css('background','none');
+                });
+            $('#child')
+                .on('mouseover', function(e){
+                    // 현재 이벤트에서 부모요소 실행 중지
+                    e.stopPropagation();
+                    $(this).css('background','red');
+                })
+                .on('mouseout', function(){
+                    $(this).css('background','none');
+                });
+        })
+        
+    </script>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>

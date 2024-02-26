@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제</title>
+    <script>
+        let input = prompt("숫자를 입력하세요");
+        for (let i=0; i<input.length; i++) {
+            let a = input.charAt(i);
+            if (!(0<=a&&a<=9)) {
+                alert("입력한 값이 숫자가 아닙니다");
+                break;
+            }
+        }
+
+        document.write("입력한 값 : "+input)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

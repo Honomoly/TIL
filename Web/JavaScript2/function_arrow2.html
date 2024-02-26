@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수</title>
+    <script>
+        let nums = [2, 3, 5, 7, 11];
+
+        nums.forEach((x, y) => {
+            console.log(x*y);
+        })
+        // 2*0, 3*1, 5*2, 7*3, 11*4가 차례대로 나옴
+
+        let fruits = ["사과", "포도", "수박", "복숭아"];
+
+        fruits.forEach((item, index, list) => {
+            console.log(item, index, list);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

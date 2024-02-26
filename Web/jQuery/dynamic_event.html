@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동적 이벤트</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#createBtn').on('click', function(){
+                $(this).after('<p><input type="button" id="newBtn1" value="새 버튼1">'+
+                    '<input type="button" id="newBtn2" value="새 버튼2">');
+            });
+
+            // 정적 연결 처리
+            // 생성된 요소는 이벤트 등록이 되지 않았기에 반응 없음
+            $('#newBtn1').on('click', function(){
+                alert("[새 버튼1]을 클릭했습니다");
+            })
+
+            // 동적 연결 처리
+            // 새로 document에서 가져오기 때문에 반응 있음
+            $(document).on('click', '#newBtn2', function(){
+                alert("[새 버튼2]을 클릭했습니다");
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" id="createBtn" value="새 버튼 만들기">
+</body>
+</html>

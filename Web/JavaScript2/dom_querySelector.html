@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : querySelector()</title>
+    <script>
+        window.onload = function() {
+            // let header = document.querySelector('h1'); // 태그 선택자
+            // let header = document.querySelector('#header'); // 아이디 선택자
+            let header = document.querySelector('.header'); // 클래스 선택자
+
+            header.style.color = "orange";
+            header.style.background = "red";
+            header.innerHTML = "querySelector() 사용";
+        }
+    </script>
+</head>
+<body>
+    <h1>Header</h1>
+    <h1 id="header">Header</h1>
+    <h1 class="header">Header</h1>
+</body>
+</html>

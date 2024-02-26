@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>윈도우 이벤트</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).resize(function(){
+                let winWidth = $(window).width();
+                let winHeight = $(window).height();
+
+                $('h3').text('윈도우 크기 : '+winWidth+'x'+winHeight);
+
+                let bgColor;
+                if ((winWidth**2)+(winHeight**2)<800**2) {
+                    bgColor = 'green';
+                } else {
+                    bgColor = 'yellow';
+                }
+
+                $('*').css('background', bgColor);
+            })
+        })
+    </script>
+</head>
+<body>
+    <h3>윈도우 크기 : Default</h3>
+</body>
+</html>

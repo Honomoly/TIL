@@ -1,0 +1,137 @@
+[
+ {
+   "bookNo": 1001,
+   "bookName": "데이터베이스 이론",
+   "bookAuthor": "홍길동",
+   "bookPrice": 22000,
+   "bookDate": "2019-11-11",
+   "bookStock": 5,
+   "pubNo": 3
+ },
+ {
+   "bookNo": 1002,
+   "bookName": "자바 프로그래밍",
+   "bookAuthor": "이몽룡",
+   "bookPrice": 25000,
+   "bookDate": "2021-12-12",
+   "bookStock": 4,
+   "pubNo": 1
+ },
+ {
+   "bookNo": 1003,
+   "bookName": "인터넷프로그래밍",
+   "bookAuthor": "성춘향",
+   "bookPrice": 30000,
+   "bookDate": "2019-02-10",
+   "bookStock": 10,
+   "pubNo": 2
+ },
+ {
+   "bookNo": 1004,
+   "bookName": "안드로이드 프로그래밍",
+   "bookAuthor": "변학도",
+   "bookPrice": 23000,
+   "bookDate": "2017-10-10",
+   "bookStock": 2,
+   "pubNo": 1
+ },
+ {
+   "bookNo": 1005,
+   "bookName": "안드로이드 앱",
+   "bookAuthor": "강길동",
+   "bookPrice": 26000,
+   "bookDate": "2020-01-11",
+   "bookStock": 5,
+   "pubNo": 2
+ },
+ {
+   "bookNo": 1006,
+   "bookName": "MS SQL SERVER 2014",
+   "bookAuthor": "박지성",
+   "bookPrice": 35000,
+   "bookDate": "2020-03-25",
+   "bookStock": 7,
+   "pubNo": 3
+ },
+ {
+   "bookNo": 1007,
+   "bookName": "HTML & CSS",
+   "bookAuthor": "손흥민",
+   "bookPrice": 18000,
+   "bookDate": "2023-09-30",
+   "bookStock": 3,
+   "pubNo": 1
+ },
+ {
+   "bookNo": 1008,
+   "bookName": "MFC 입문",
+   "bookAuthor": "류현진",
+   "bookPrice": 20000,
+   "bookDate": "2015-12-12",
+   "bookStock": 5,
+   "pubNo": 1
+ },
+ {
+   "bookNo": 1009,
+   "bookName": "안드로이드 게임 제작",
+   "bookAuthor": "나길동",
+   "bookPrice": 33000,
+   "bookDate": "2018-10-31",
+   "bookStock": 5,
+   "pubNo": 2
+ },
+ {
+   "bookNo": 1010,
+   "bookName": "C++객체지향 프로그래밍",
+   "bookAuthor": "추신수",
+   "bookPrice": 24000,
+   "bookDate": "2019-04-20",
+   "bookStock": 2,
+   "pubNo": 3
+ },
+ {
+   "bookNo": 1011,
+   "bookName": "JSP 웹 프로그래밍",
+   "bookAuthor": "김연아",
+   "bookPrice": 27000,
+   "bookDate": "2020-10-23",
+   "bookStock": 8,
+   "pubNo": 1
+ },
+ {
+   "bookNo": 1012,
+   "bookName": "해커들의 해킹 기법",
+   "bookAuthor": "손연재",
+   "bookPrice": 32000,
+   "bookDate": "2018-07-07",
+   "bookStock": 1,
+   "pubNo": 2
+ },
+ {
+   "bookNo": 1013,
+   "bookName": "자료구조",
+   "bookAuthor": "홍길동",
+   "bookPrice": 19000,
+   "bookDate": "2020-01-20",
+   "bookStock": 4,
+   "pubNo": 1
+ },
+ {
+   "bookNo": 1014,
+   "bookName": "파이썬",
+   "bookAuthor": "성춘향",
+   "bookPrice": 35000,
+   "bookDate": "2023-09-25",
+   "bookStock": 5,
+   "pubNo": 2
+ },
+ {
+   "bookNo": 1015,
+   "bookName": "자바스크립 & jQuery",
+   "bookAuthor": "홍길동",
+   "bookPrice": 27000,
+   "bookDate": "2019-10-22",
+   "bookStock": 2,
+   "pubNo": 2
+ }
+]

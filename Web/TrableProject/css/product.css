@@ -1,0 +1,39 @@
+#productBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+#productBox .box a {
+    color: #1c1a07;
+    text-decoration: none;
+}
+.box {
+    flex: 1;
+    margin-top: 20px;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    border: solid 2px #1c1a07;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin: 20px;
+    text-align: left;
+}
+
+.box h4{
+    text-align: center;
+}
+
+.box ol li{
+    align-content: center;
+}
+
+#productBox .box a:hover {
+    color: #ff455c;
+}
+
+#content2 .box{
+    background-color: #dbefec;
+}

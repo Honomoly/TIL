@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 문제</title>
+    <script>
+        function start() {
+            check = confirm("성적을 입력하시겠습니까?");
+            check?alert("평균 : "+input().toFixed(2)):alert("종료합니다");
+        }
+        // toFixed(n) : 소수점 n의 자릿수까지 표기
+        // toLocaleString() : 천단위로 쉼표 찍기
+
+        function input() {
+            Kor = Number(prompt("국어점수 입력"));
+            Eng = Number(prompt("영어점수 입력"));
+            Math = Number(prompt("수학점수 입력"));
+            return (Kor + Eng + Math)/3;
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="start()">성적 입력</button>
+</body>
+</html>

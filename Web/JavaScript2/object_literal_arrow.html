@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 지정 객체 : Literal 방식 2</title>
+    <script>
+        let person = {
+            name : "장승헌",
+            age : 26,
+            gender : "남자",
+            getName : () => {
+                // 화살표 함수에서는 this를 찾지 못함!
+                return this.name; // 출력 안됨
+            }
+        }
+
+        console.log(person.getName());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

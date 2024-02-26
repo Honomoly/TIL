@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM : getElementsByTagName()</title>
+    <style>
+        #box {
+            margin: 0 auto;
+            width: 70%;
+            text-align: center;
+        }
+        table {margin: 0 auto;}
+        td {width: 50px; height: 30px;}
+    </style>
+    <script>
+        let colors = ["red", "orange", "yellow", "green", "blue", "indigo", "purple"];
+        let tdArr = document.getElementsByTagName('td')
+
+        // id로 DOM 요소를 가져오기 위해서 로드가 끝난 후에 실행!
+        window.onload = function() {
+            let setNumberButton = document.getElementById('setNumberButton');
+            let setColorButton = document.getElementById('setColorButton');
+            let clearNumberButton = document.getElementById('clearNumberButton');
+            let clearColorButton = document.getElementById('clearColorButton');
+            
+            setNumberButton.onclick = function() {
+                for (let i=0; i<tdArr.length; i++) {
+                    tdArr[i].innerHTML = i+1;
+                }
+            }
+            setColorButton.onclick = function() {
+                for (let i=0; i<tdArr.length; i++) {
+                    tdArr[i].style.background = colors[i];
+                }
+            }
+            clearNumberButton.onclick = function() {
+                for (let i=0; i<tdArr.length; i++) {
+                    tdArr[i].innerHTML = "";
+                }
+            }
+            clearColorButton.onclick = function() {
+                for (let i=0; i<tdArr.length; i++) {
+                    tdArr[i].style.background = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <table border="1">
+            <tr>
+                <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+        </table><br>
+
+        <button id="setNumberButton">셀에 번호 채우기</button>
+        <button id="setColorButton">셀에 색상 채우기</button><br><br>
+
+        <button id="clearNumberButton">셀에서 번호 제거</button>
+        <button id="clearColorButton">셀에서 색상 제거</button><br><br>
+    </div>
+</body>
+</html>

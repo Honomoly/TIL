@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Page</title>
+</head>
+<body>
+    <h2>Print Image</h2>
+    <img src="{% static '/images/그림.PNG' %}">
+    <br><br>
+    {% for member in members %}
+        이름 : {{member.name}}, 나이 : {{member.age}}<br>
+    {% endfor %}
+</body>
+</html>

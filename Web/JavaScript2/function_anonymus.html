@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수</title>
+    <script>
+        /*
+        let 변수 = function(매개변수) {명령문};
+        일반 함수는 코드 실행시 메모리상에 계속 위치하며 호출때마다 즉각즉각 실행되지만
+        익명 함수는 호출시에만 메모리에 저장되서 계산 후 사라진다
+        메모리 절약면에서 강점을 가진다
+        다만 변수 선언의 단점을 공유하여 hoisting이 불가능하다
+        */
+
+        // 바로 함수 적용하는 경우
+        (function(k1) {
+            document.write(k1**2+"<br>");
+        })(7)
+
+        // forEach()에 넣어서 사용하는 경우
+        let nums = [2, 3, 5, 7, 11];
+        nums.forEach(function(k1, k2, k3) {
+            document.write(k1+" / "+k2+" / "+k3+"<br>");
+        })
+
+        // 변수에 저장하기
+        let sum = function(a, b) {
+            document.write((a+b)+"<br>");
+        } 
+        
+        // 변수를 함수처럼 호출
+        sum(10, 20);
+
+        // 반환값 할당또한 가능
+        let multiple = function(a, b) {
+            document.write((a*b)+"<br>");
+        }
+
+        multiple(10, 20);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

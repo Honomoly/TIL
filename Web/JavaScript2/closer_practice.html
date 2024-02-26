@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저 연습</title>
+    <script>
+
+        function retain(x1) {
+            // 클로저 환원
+            return function(x2) {
+                x1 += x2;
+                return x1;
+            }
+        }
+
+        let fct1 = retain(7); // x1에 해당하는 부분 대입
+        let fct2 = retain(0);
+        /*
+        이제 fct1,2에는 위의 return부분에 해당하는 함수와 x1에 해당하는 변수가
+        각각 저장되어 있다
+        변수를 넣고 실행할 때마다 저마다의 x1을 업데이트 하며 명령식을 수행하게 된다
+        */
+        console.log(fct1(3)); // x2에 해당하는 부분 대입
+        console.log(fct1(2));
+        console.log(fct1(1));
+        console.log(fct1(7));
+
+        console.log(fct2(1));
+        console.log(fct2(2));
+        console.log(fct2(1));
+        console.log(fct2(2));
+
+        let fct3 = function() {
+            let a = 7;
+            return ++a
+        }
+
+        console.log(fct3());
+        console.log(fct3());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

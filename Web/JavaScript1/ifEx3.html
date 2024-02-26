@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제</title>
+    <script>
+        let id = "abcd";
+        let pass = "1234";
+        let id_i = prompt("아이디 입력");
+        let pass_i = prompt("비밀번호 입력");
+        if (id == id_i && pass == pass_i) {
+            alert("abcd님 반갑습니다!");
+            passing = true;
+            while (passing) {
+                let ans = prompt("대한민국의 수도는?");
+                if (ans == "서울"){
+                    document.write("정답입니다!")
+                    passing = false;
+                } else {
+                    alert("오답입니다. 다시 시도하세요.")
+                }
+            }
+        } else {
+            document.write("종료합니다.");
+            alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

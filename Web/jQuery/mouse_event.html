@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+    <style>
+        #btn {
+            width: 300px;
+            height: 60px;
+            font-size: 30px;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // .on()으로 동적인 반응 구현
+
+            $('#btn').on('click', function(){
+                alert('클릭하였습니다');
+            })
+
+            // 두 개의 이벤트를 연속으로 처리
+            $('#btn')
+                .on('mouseover', function(){
+                    $(this).css('background', 'yellow');
+                })
+                .on('mouseout', function(){
+                    $(this).css('background', 'green');
+                })
+        })
+    </script>
+</head>
+<body>
+    <button id="btn">클릭하세요</button>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운팅 : 클로저(익명함수) 사용시</title>
+    <script>
+        // 함수 선언
+        function increase() {
+            // 지역변수 선언
+            let count = 0;
+            // 클로저(익명함수)로 환원
+            // 밑의 count1, count2 변수에 저장되는 부분이 바로 여기다
+            return function() {
+                return ++count;
+            }
+        }
+
+        let count1 = increase();
+        let count2 = increase();
+
+        console.log(count1());
+        console.log(count1());
+        console.log(count1());
+        console.log(count2());
+        console.log(count2());
+        console.log(count2());
+        console.log(count1());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

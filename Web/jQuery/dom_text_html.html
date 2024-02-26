@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#a').text("<h1>jQuery</h1>"); // 태그요소 인식 못함
+            $('#b').html("<h1>jQuery</h1>"); // 태그요소 인식!
+        })
+    </script>
+</head>
+<body>
+    <div id="a">A</div>
+    <div id="b">B</div>
+</body>
+</html>

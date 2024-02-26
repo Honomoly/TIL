@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static '/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static '/js/ajax_test.js' %}"></script>
+    <script src="{% static '/js/product_search2.js' %}"></script>
+    <script src="{% static '/js/product_search3.js' %}"></script>
+    <link rel="stylesheet" href="{% static '/css/product.css' %}">
+    <link rel="stylesheet" href="{% static '/css/login.css' %}">
+    <title>base 페이지</title>
+</head>
+<body>
+    <div id="wrap">
+        <!-- nvbar.html 코드를 그대로 가져온다 -->
+        {% include "nvbar.html" %}
+        <hr>
+        {% block content %}
+        <!-- 이곳이 앞으로 작성할 코드들이 들어갈 부분이다 -->
+        {% endblock content %}
+    </div>
+</body>
+</html>

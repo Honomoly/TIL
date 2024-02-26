@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디폴트 매개변수</title>
+    <script>
+        /*
+        미리 값이 할당되어있는 매개변수를 디폴트 매개변수라고 한다
+        값이 배정되면 그 값을 쓰지만 배정되지 않으면 디폴드 값을 쓴다
+        */
+
+        function rect(width=10, height=20) {
+            document.write("Width : "+width+" / ");
+            document.write("Height : "+height+"<br>");
+            return width*height;
+        }
+
+        console.log(rect());
+        console.log(rect(30));
+        console.log(rect(40,50));
+
+        document.write("<hr>")
+
+        // 디폴트 매개변수와 일반 매개변수를 혼용하는 경우 디폴트 매개변수를 뒤에 위치한다
+        function showInfo(name, score, year=4) {
+            document.write("Name : "+name+"<br>");
+            document.write("Score : "+score+"<br>");
+            document.write("Year : "+year+"<br><br>");
+        }
+
+        showInfo();
+        showInfo("장승헌");
+        showInfo("장승헌", 80);
+        showInfo("장승헌", 80, 3);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

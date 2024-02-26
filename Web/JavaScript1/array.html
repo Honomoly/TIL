@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열문</title>
+    <script>
+        // 크기가 5인 배열 생성
+        let num = new Array(5);
+
+        for (let i=0; i<num.length; i++) {
+            num[i] = i;
+        }
+
+        for (let i=0; i<num.length; i++) {
+            document.write(" " + num[i]);
+        }
+
+        document.write("<hr>")
+
+        // 크기가 없는 배열 생성
+        let player = new Array();
+
+        for (let i=0; i<3; i++) {
+            player[i] = "선수"+i;
+        }
+
+        for (let i=0; i<3; i++) {
+            document.write(player[i] + "<br>")
+        }
+        
+        document.write("<hr>")
+
+        // 배열 직접 생성
+        let fish = new Array("고등어", "갈치", "명태", "대구");
+        for (i=0; i<fish.length; i++) {
+            document.write(fish[i] + " ")
+        }
+
+        document.write("<hr>")
+
+        // 서로 다른 타입끼리 배열 생성
+        let student = ["홍길동", 4, 93.5, "A"];
+
+        for (i=0; i<student.length; i++) {
+            document.write(student[i] + " ")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

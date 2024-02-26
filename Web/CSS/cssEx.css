@@ -1,0 +1,73 @@
+
+#wrap {
+    text-align: center;
+    margin: 0 auto;
+    width: 900px;
+}
+
+div.menu {
+    background-color: #333;
+    color: white;
+    line-height: 50px;
+    height: 50px;
+    font-size: 25px;
+}
+
+ul.menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul.menu li {
+    float: left;
+    width: 25%;
+}
+
+ul.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+ul.menu li a:hover {
+    background-color: yellow;
+    color: red;
+    text-decoration: none;
+    display: block; /* 호버링이 박스 전체에 해당됨 */
+}
+
+div.main_elt {
+    margin: 40px;
+    display: inline-block;
+}
+
+div.mainName {
+    font-weight: bold;
+    font-size: 25px;
+    color: blue;
+}
+
+div.mainPrice {
+    font-size: 19px;
+    color: green;
+}
+
+div.sub_elt {
+    text-align: left;
+    display: inline-block;
+    width : 400px;
+    height: 200px;
+    border: solid 1px black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px;
+}
+
+div.sub_elt > span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+div.sub_cont {
+    font-size: 20px;
+}

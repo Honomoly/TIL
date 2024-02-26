@@ -1,0 +1,83 @@
+[
+ {
+   "clientNo": 1,
+   "clientName": "메시",
+   "clientPhone": "010-1111-1111",
+   "clientAddress": "서울",
+   "clientBirth": "1987-06-24",
+   "clientHobby": "축구",
+   "clientGender": "남"
+ },
+ {
+   "clientNo": 2,
+   "clientName": "호날두",
+   "clientPhone": "010-2222-2222",
+   "clientAddress": "천안",
+   "clientBirth": "1984-02-05",
+   "clientHobby": "",
+   "clientGender": "남"
+ },
+ {
+   "clientNo": 3,
+   "clientName": "샤라포바",
+   "clientPhone": "010-3333-3333",
+   "clientAddress": "제주",
+   "clientBirth": "1987-04-19",
+   "clientHobby": "",
+   "clientGender": "여"
+ },
+ {
+   "clientNo": 4,
+   "clientName": "베컴",
+   "clientPhone": "010-4444-4444",
+   "clientAddress": "안양",
+   "clientBirth": "1994-05-02",
+   "clientHobby": "영화",
+   "clientGender": "남"
+ },
+ {
+   "clientNo": 5,
+   "clientName": "네이마르",
+   "clientPhone": "010-5555-5555",
+   "clientAddress": "수원",
+   "clientBirth": "1992-02-05",
+   "clientHobby": "게임",
+   "clientGender": "남"
+ },
+ {
+   "clientNo": 6,
+   "clientName": "윌리엄스",
+   "clientPhone": "010-6666-6666",
+   "clientAddress": "서울",
+   "clientBirth": "1981-09-26",
+   "clientHobby": "테니스",
+   "clientGender": "여"
+ },
+ {
+   "clientNo": 7,
+   "clientName": "옴바페",
+   "clientPhone": "010-7777-7777",
+   "clientAddress": "천안",
+   "clientBirth": "1991-01-07",
+   "clientHobby": " ",
+   "clientGender": "남"
+ },
+ {
+   "clientNo": 8,
+   "clientName": "살라",
+   "clientPhone": "010-8888-8888",
+   "clientAddress": "부산",
+   "clientBirth": "1982-04-22",
+   "clientHobby": "",
+   "clientGender": "남"
+ },
+ {
+   "clientNo": 9,
+   "clientName": "루니",
+   "clientPhone": "010-9999-9999",
+   "clientAddress": "서울",
+   "clientBirth": "2002-10-24",
+   "clientHobby": "등산",
+   "clientGender": "남"
+ }
+]
