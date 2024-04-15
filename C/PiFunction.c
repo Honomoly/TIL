@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // 지금까지 배웠던거 활용해보기
 
@@ -6,9 +7,10 @@
 
 int pi_function(int N) {
     if (N < 2) return 0;
-    else if (N == 2) return 1;
+    if (N == 2) return 1;
 
-    int seq[N];
+    // int seq[N];
+    int *seq = (int *) malloc((N-1) * sizeof(int)); // 메모리 동적 할당
     int *ptr1 = seq, *ptr2 = seq, *ptr3, num;
 
     for (int i = 2; i <= N; ++i) {
@@ -35,10 +37,12 @@ int pi_function(int N) {
     int result = 0;
     ptr1 = seq;
     
-    for (int i = 1; i <= N; ++i) {
+    for (int i = 1; i < N; ++i) {
         if (*ptr1 != 0) ++result;
         ++ptr1;
     }
+
+    free(seq); // 메모리 할당 해제
 
     return result;
 }
@@ -47,6 +51,7 @@ int main() {
     int input;
     printf("Input Value : ");
     scanf("%d", &input);
-    printf("Value of pi(%d) : %d\n", input, pi_function(input));
+    int result = pi_function(input);
+    printf("Value of pi(%d) : %d\n", input, result);
     return 0;
 }
